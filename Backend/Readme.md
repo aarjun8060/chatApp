@@ -1,26 +1,40 @@
-# NodeJS,Mongoose,Express Project in MVC Architecture
-## E-commcerce Backend
+# ChatApp Backend
 
-**Supported version of nodejs >= 12**,
-**Supported version of mongoose >= 6**
+## Project Description
+The backend of ChatApp is built with Node.js, utilizing Drizzle ORM for database interactions, providing API endpoints for user authentication, messaging, and profile management.
 
-## About 
-- This is a Node application, developed using MVC pattern with Node.js, ExpressJS, and Mongoose. 
-- MongoDB database is used for data storage, with object modeling provided by Mongoose.
+## Project Structure
+The project is organized as follows:
 
-## Features
+├───config # Configuration files (database, environment variables)
 
-- **Product Management**: Create, read, update, and delete products.
-- **Order Management**: Handle orders, including creation, cancellation, and status updates.
-- **User Authentication**: Secure user authentication and authorization.
-- **RESTful APIs**: Follows RESTful principles for easy integration with front-end applications.
+├───controllers # Route controllers handling API logic
 
-## Initial
-1. Install all dependency
-```$ npm install```
+├───db # Database setup and migrations
 
-2. Start development server
-```$ npm run dev```
+├───models # Database models defined using Drizzle ORM
 
-## How to use generated APIs:
-[Click here to visit documentation](<https://documenter.getpostman.com/view/29989032/2sA3JKbgaq/> "API Documentation")
+├───routes # Express routes for API endpoints
+
+├───services # Business logic services (authentication, messaging)
+
+└───utils # Utility functions and helpers
+
+## Project Requirements and Dependencies
+- Node.js
+- Express.js
+- PostgreSQL (or other supported by Drizzle ORM)
+- Drizzle ORM
+- bcryptjs (for password hashing)
+- JSON Web Tokens (JWT) for authentication
+
+## Environment Variables
+Create a `.env` file in the root of your project and add the following variables:
+
+```env
+DB_HOST=localhost
+DB_USER=myusername
+DB_PASSWORD=mypassword
+DB_NAME=chatapp_db
+JWT_SECRET=yoursecretkey
+```
